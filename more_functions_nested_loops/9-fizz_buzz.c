@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * return: always 0
+ * Return: always 0 (Success)
  */
 
 int main(void)
@@ -17,7 +17,9 @@ int main(void)
 			printf("Buzz");
 		if (fb % 3 != 0 && fb % 5 != 0)
 			printf("%d", fb);
-		printf(" ");
+		if (fb < 100)
+			printf(" ");
 	}
+	printf("\n");
 	return (0);
 }
