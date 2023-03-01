@@ -8,7 +8,7 @@
 
 int _atoi(char *s)
 {
-	int sig = 1, n = 0;
+	unsigned int sig = 1, n = 0;
 
 	while (*s != '\0')
 	{
@@ -18,6 +18,7 @@ int _atoi(char *s)
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
+
 			n = n * 10 + (*s - '0');
 		}
 		else if (n > 0)
