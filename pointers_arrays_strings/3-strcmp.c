@@ -9,22 +9,14 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int cmp;
-	int count = 0;
-
-
-		if (s1[count] > s2[count])
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
 		{
-			cmp = (s1[count] - s2[count]);
+			return (*s1 - *s2);
 		}
-		if (s1[count] < s2[count])
-		{
-			cmp = (s1[count] - s2[count]);
-		}
-		if (s1[count] == s2[count])
-		{
-			cmp = (s1[count] - s2[count]);
-		}
-		count++;
-	return (cmp);
+		s1++;
+		s2++;
+	}
+	return (0);
 }
