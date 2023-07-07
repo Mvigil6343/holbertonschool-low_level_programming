@@ -1,8 +1,11 @@
 #include "main.h"
 #include <string.h>
-/*char *_memset(char *s, char b, unsigned int n);
+/**
+char *_memset(char *s, char b, unsigned int n);
+*/
 char *_strcat(char *dest, char *src);
-char *_strncat(char *dest, char *src, int n);*/
+char *_strncat(char *dest, char *src, int n);
+
 /**
  * _memset - fills memory with a constant byte.
  * @s: the pointer to the memory
@@ -12,7 +15,8 @@ char *_strncat(char *dest, char *src, int n);*/
  * Return: a pointer to the memory area s
  */
 
-/*char *_memset(char *s, char b, unsigned int n)
+/* 
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int m;
 	int count;
@@ -26,7 +30,8 @@ char *_strncat(char *dest, char *src, int n);*/
 		s[m] = b;
 	}
 	return (s);
-}*/
+}
+*/
 /**
  * _strcat - concatenates two strings
  * @dest: destination string
@@ -35,7 +40,7 @@ char *_strncat(char *dest, char *src, int n);*/
  * Return: dest
  */
 
-/*char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int c;
 	int d;
@@ -54,7 +59,7 @@ char *_strncat(char *dest, char *src, int n);*/
 	}
 	dest[c] = '\0';
 	return (dest);
-}*/
+}
 /**
  * _strncat - function that concatenates two strings
  *
@@ -64,8 +69,7 @@ char *_strncat(char *dest, char *src, int n);*/
  *
  * Return: dest
  */
-
-/*char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int c;
 	int d;
@@ -84,7 +88,7 @@ char *_strncat(char *dest, char *src, int n);*/
 	}
 	dest[c] = '\0';
 	return (dest);
-}*/
+}
 /**
  * string_nconcat - concatenates two strings
  * @s1: a string
@@ -114,7 +118,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (str == NULL)
 		return (NULL);
 	memset(str, 0, len1 + n + 1);
-	strcat(str, s1);
-	strncat(str, s2, n);
+	_strcat(str, s1);
+	_strncat(str, s2, n);
 	return (str);
 }
