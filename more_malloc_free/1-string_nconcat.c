@@ -1,8 +1,7 @@
 #include "main.h"
 #include <string.h>
-/**
+
 char *_memset(char *s, char b, unsigned int n);
-*/
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
 
@@ -15,7 +14,6 @@ char *_strncat(char *dest, char *src, int n);
  * Return: a pointer to the memory area s
  */
 
-/* 
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int m;
@@ -31,7 +29,7 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 	return (s);
 }
-*/
+
 /**
  * _strcat - concatenates two strings
  * @dest: destination string
@@ -117,7 +115,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	str = malloc(sizeof(char) * (len1 + n + 1));
 	if (str == NULL)
 		return (NULL);
-	memset(str, 0, len1 + n + 1);
+	_memset(str, 0, len1 + n + 1);
 	_strcat(str, s1);
 	_strncat(str, s2, n);
 	return (str);
