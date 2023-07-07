@@ -17,12 +17,7 @@ char *_strncat(char *dest, char *src, int n);
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int m;
-	int count;
-
-	for (count = 0; s[count] != '\0'; count++)
-	{
-		m++;
-	}
+	
 	for (m = 0; m < n; m++)
 	{
 		s[m] = b;
