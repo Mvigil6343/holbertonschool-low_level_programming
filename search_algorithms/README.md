@@ -1,2 +1,0 @@
-# C - Search Algorithms
- Master
